@@ -15,17 +15,17 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //destroy pizza if it goes beyond the topbound
         if (transform.position.z > topBound)
         {
             //destroy this game object
             Destroy(gameObject);
         }
-
+        //destroy the animal if it behind the lowerbound
         else if (transform.position.z < lowerBound)
         {
             Debug.Log("Game Over");
-            //destroy this game object
+           
             Destroy(gameObject);
         }
     }
